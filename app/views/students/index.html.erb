@@ -3,6 +3,6 @@
 
 
 
-<%= @students.search do |student| %>
+<%= @students.each.search do |student| %>
 <%= render partial: 'student', locals: {student: student} %>
 <% end %>

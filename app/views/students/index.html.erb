@@ -1,12 +1,6 @@
 <h2>Find a student</h2>
 
-<%= form_for student.search do |f|%>
-<p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-</p>
-  <%= f.submit %>
-<% end %>
+
 
 
 <%= @students.search do |student| %>

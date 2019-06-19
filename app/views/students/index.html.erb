@@ -1,0 +1,6 @@
+
+
+
+<%= @students.search do |student| %>
+<%= render partial: 'student', locals: {student: student} %>
+<% end %>

@@ -17,6 +17,6 @@ class Student < ActiveRecord::Base
   def search(name)
     self.students.collect do |student|
       student.name.upcase.match(/#{name.upcase}/)
-    end 
+    end
   end
 end

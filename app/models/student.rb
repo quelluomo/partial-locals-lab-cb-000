@@ -15,10 +15,10 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def self.search(name = 1)
-  if name == 1
-    self.all
-  else
-    self.all.find_all { |student| student.name.upcase.include? name.upcase }
+    if name == 1
+      self.all
+    else
+      self.all.find_all { |student| student.name.upcase.include? name.upcase }
+    end
   end
-end
 end

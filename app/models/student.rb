@@ -15,8 +15,6 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
 
   def search(name)
-    self.students.collect do |student|
-      student.name.upcase.match(/#{name.upcase}/)
-    end
+    self.map {|s| s.name}
   end
 end
